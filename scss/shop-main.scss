@@ -1,0 +1,144 @@
+@import 'main';
+@import 'variables';
+
+/* MAIN CONTENT */
+#main-content {
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: auto;
+    // border: 2px red solid;
+
+    // SECTION A: Feedback Form
+    #section-a {
+        position: relative;
+        top: 10px;
+        padding: 30px 0;
+        margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 2px red solid;
+        height: auto;
+        color: $main-txt-color;
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            font-family: $font-krona;
+            text-align: center;
+        }
+
+        // SHOP CONTAINER
+        #shop-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+
+            // Styling all shop items
+            .shop-item {
+                position: relative;
+                width: 225px;
+                height: auto;
+                background-color: lighten($main-bg-color, 10%);
+                border-radius: 10px;
+                padding: 15px;
+
+                // Shop item image container
+                .shop-item-img-container {
+                    width: 100%;
+                    height: 250px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 25px;
+                }
+
+                // Image of Shop item
+                .shop-item-img {
+                    width: 80%;
+                    height: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                // Name of Shop item 
+                .item-name {
+                    font-weight: bold;
+                    line-height: 16px;
+                    font-size: 1rem;
+                }
+
+                // Price of Shop item
+                .item-price {
+                    margin-top: 1px;
+                    margin-bottom: 5px;
+                    color: $hoddle-orange;
+                    font-size: 1rem;
+                }
+
+                // Cart button
+                .btn-cart {
+                    width: 100%;
+                    height: auto;
+                    background-color: $hoddle-green;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    border: 0;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: darken($hoddle-green, 10%);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+
+    /* MAIN CONTENT */
+    #main-content {
+        #section-a {
+
+            // SHOP CONTAINER
+            #shop-container {
+
+                // Styling all shop items
+                .shop-item {
+                    width: 200px;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+
+    /* MAIN CONTENT */
+    #main-content {
+        top: 70px;
+
+        #section-a {
+
+            // SHOP CONTAINER
+            #shop-container {
+
+                // Styling all shop items
+                .shop-item {
+                    width: 150px;
+                }
+            }
+        }
+
+    }
+}

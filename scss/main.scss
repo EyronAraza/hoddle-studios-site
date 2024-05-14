@@ -1,0 +1,43 @@
+@import 'variables';
+
+* {
+    padding: 0;
+    margin: 0;
+
+    // Main font 
+    font-family: $font-niramit;
+
+    // Scrollbar customisation
+    scrollbar-width: thin;
+    scrollbar-color: $hoddle-green black;
+}
+
+// bg test
+body {
+    // background-image: url(../img/bg-test.png);
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-color: #35384c;
+    // background-color: #20222c;
+    //background-color: #282934;
+    background-color: $main-bg-color;
+}
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+    // body {
+    //     background-color: aquamarine;
+    // }
+}
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+    // body {
+    //     background-color: bisque;
+    // }
+}

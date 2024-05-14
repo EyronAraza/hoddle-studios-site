@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+
+/*# sourceMappingURL=variables.css.map */

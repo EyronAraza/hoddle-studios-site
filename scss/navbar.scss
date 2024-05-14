@@ -1,0 +1,461 @@
+@import 'main';
+@import 'variables';
+
+// Active link based on current page
+$text-shadow-spread: 5px;
+$text-shadow-alpha: 0.75;
+
+// hide nav mobile display
+#nav-mobile {
+    display: none;
+}
+
+/* TOP NAVIGATION BAR */
+#main-nav {
+    position: fixed;
+    height: 13vh;
+    width: 100%;
+    background-color: rgba(28, 28, 28, 0.75);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    left: 0;
+
+    // Logo
+    #logo {
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        margin: 0px 0px 0px 20px;
+        height: auto;
+        width: 150px;
+        transition: 0.5s;
+
+        // Hover over logo
+        &:hover {
+            filter: drop-shadow(0px 0px 4px $hoddle-green)
+        }
+    }
+
+    // navbar underline
+    #navbar-underline {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        $hr-color: white;
+        background-color: $hr-color;
+        color: $hr-color;
+        width: 100%;
+        height: 2px;
+        bottom: 0px;
+    }
+
+    // Download button
+    $download-transition: 0.2s;
+
+    #download-anchor {
+        margin-left: auto;
+    }
+
+    #download-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $hoddle-green;
+        padding: 4px 10px;
+        width: 100px;
+        height: 50px;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: 30px;
+        margin-top: 0;
+        // border: 0;
+        // margin-bottom: 5px;
+        z-index: 1;
+        cursor: pointer;
+        transition: $download-transition;
+
+        // Download text
+        #download-text {
+            position: absolute;
+            color: $main-txt-color;
+            font-weight: bold;
+            line-height: 0.9rem;
+            text-align: center;
+            font-size: 1rem;
+            padding: 5px 0 5px 0;
+            opacity: 1;
+            transition: $download-transition;
+        }
+
+        // Download image
+        #download-img {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            padding: 4px 4px 1px 4px;
+            transition: $download-transition;
+            opacity: 0;
+        }
+
+        // Hover over download button
+        &:hover {
+            background-color: darken($hoddle-green, 10%);
+
+            #download-text {
+                opacity: 0;
+            }
+
+            #download-img {
+                opacity: 1;
+            }
+        }
+    }
+
+    // Hide Menu Bar
+    #menu-btn {
+        display: none;
+    }
+
+    // Hide Checkbox for menu bar
+    #checkbox-menubar {
+        display: none;
+    }
+
+    // Hide Social media container
+    #social-media-container {
+        display: none;
+    }
+
+    // Hide exit button
+    #exit-btn {
+        display: none;
+    }
+
+    // Unordered lists with links
+    ul {
+        position: absolute;
+        margin-top: 10px;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        z-index: 0;
+
+        // Lists with links
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.3rem;
+            $link-transition: 0.5s;
+
+            // Anchor links
+            .nav-link {
+                text-decoration: none;
+                color: white;
+                // font-size: 1.3rem;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                z-index: 1;
+                opacity: 0.5;
+                transition: $link-transition;
+
+                // Active anchor link based on current page
+                &.active {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    opacity: 1;
+                    text-shadow: 0 0 $text-shadow-spread rgba(255, 255, 255, $text-shadow-alpha);
+                }
+            }
+
+            // Link icons
+            .link-icon {
+                position: absolute;
+                color: white;
+                // font-size: 1.5rem;
+                opacity: 0;
+                cursor: pointer;
+                transform: translateY(0);
+                transition: $link-transition;
+
+                // Active link icon based on current page
+                &.active {
+                    transform: translateY(-20px);
+                    opacity: 1;
+                }
+            }
+
+            // Loop through each listed links (purpose: display different underline sizes under each link)
+            $links-line-length-arr: 55px, 81px, 94px, 52px;
+
+            @for $i from 1 through length($links-line-length-arr) {
+                .link-underline-#{$i} {
+                    position: absolute;
+                    bottom: 0px;
+                    background-color: white;
+                    width: nth($links-line-length-arr, $i);
+                    height: 3px;
+                    border-radius: 20px;
+                    transform-origin: center;
+                    transform: scaleX(0);
+                    transition: $link-transition ease-in-out;
+
+                    &.active {
+                        transform-origin: center;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+
+            // Hover over link to play animation
+            &:hover {
+                .link-icon {
+                    transform: translateY(-20px);
+                    opacity: 1;
+                }
+
+                .nav-link {
+                    opacity: 1;
+                }
+
+                @for $i from 1 through length($links-line-length-arr) {
+                    .link-underline-#{$i} {
+                        transform-origin: center;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// For adding responsive values to both phone and tablet
+@mixin nav-bar-responsive($logo-width, $exit-pad-right, $social-icon-size, $btn-pad-sides) {
+
+    // Navigation SIDEBAR
+    #main-nav {
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        left: 200%;
+        background-color: rgba(28, 28, 28, 1);
+        opacity: 0;
+        transition: 0.25s;
+
+        // Logo
+        #logo {
+            margin: 0;
+            width: auto;
+            // min-width: 150px;
+            height: 12vh;
+        }
+
+        // Exit button
+        #exit-btn {
+            position: absolute;
+            color: white;
+            cursor: pointer;
+            font-size: 5vh;
+            margin-left: 90%;
+            margin-top: 3vh;
+            padding-right: $exit-pad-right;
+            display: block;
+        }
+
+        // navbar underline
+        #navbar-underline {
+            display: none;
+        }
+
+        // Underline in each links (disabled)
+        .link-underline {
+            display: none;
+        }
+
+        // Unordered lists with links
+        ul {
+            position: relative;
+            flex-direction: column;
+            text-align: left;
+            gap: 3vh;
+
+            // Lists with links
+            li {
+                position: relative;
+                flex-direction: row;
+                width: 97%;
+                // font-size: 1.6rem;
+                font-size: 4vh;
+                border-radius: 10px;
+                transition: 0.2s;
+
+                // Anchor links
+                .nav-link {
+                    width: 100%;
+                    opacity: 1;
+                    padding-left: 10vh;
+                    z-index: 2;
+
+                    // Active anchor link based on current page
+                    &.active {
+                        color: white;
+                        text-decoration: none;
+                        font-weight: bold;
+                        opacity: 1;
+                        text-shadow: 0 0 0 rgba(255, 255, 255, 255);
+                    }
+                }
+
+                // Icon links
+                .link-icon {
+                    position: absolute;
+                    transform: translateY(0px);
+                    opacity: 1;
+                    left: 2vh;
+                    transition: none;
+
+                    &.active {
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                }
+
+                // Hover animations
+                &:hover {
+                    background-color: lighten(rgba(28, 28, 28, 1), 25%);
+
+                    .link-icon {
+                        transform: translateY(0);
+                    }
+                }
+
+                // Active listed link based on current pace
+                &.active {
+                    background-color: lighten(rgba(28, 28, 28, 1), 25%);
+                }
+            }
+        }
+
+        #download-anchor {
+            margin-left: 0;
+        }
+
+        // Download button
+        #download-btn {
+            margin: 0;
+            margin-top: 20vh;
+            width: 25vh;
+            height: 10vh;
+            padding-left: $btn-pad-sides;
+            padding-right: $btn-pad-sides;
+
+            // Download text
+            #download-text {
+                width: 200px;
+                border-radius: 50px;
+                line-height: 3vh;
+                font-size: 3vh;
+            }
+
+            // Download image
+            #download-img {
+                width: auto;
+                height: 10vh;
+                padding-top: 5px;
+            }
+        }
+
+        // Social Media container
+        #social-media-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            gap: 10vw;
+
+            // social media icons
+            .social-icon {
+                color: white;
+                font-size: $social-icon-size;
+                cursor: pointer;
+
+                &:hover {
+                    // text-shadow: 0 0 $text-shadow-spread rgba(255, 255, 255, $text-shadow-alpha);
+                    color: darken($main-txt-color, 10%);
+                }
+            }
+        }
+    }
+
+    // Top navigation bar for mobile
+    #nav-mobile {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background-color: rgba(28, 28, 28, 0.75);
+        display: flex;
+        align-items: center;
+        z-index: 99;
+
+        // mobile nav logo
+        #logo-mob {
+            width: $logo-width;
+            height: auto;
+        }
+
+        // Hide Checkbox for menu bar
+        #checkbox-menubar {
+            display: none;
+        }
+
+        // Menu bar
+        #menu-btn {
+            color: white;
+            margin-left: auto;
+            margin-right: 20px;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        // If menu bar is clicked
+        #checkbox-menubar:checked~nav {
+            left: 0;
+        }
+
+        // navbar underline
+        #navbar-underline {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            $hr-color: white;
+            background-color: $hr-color;
+            color: $hr-color;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+        }
+    }
+}
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+    @include nav-bar-responsive(150px, 10px, 5vh, 3px);
+}
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+    @include nav-bar-responsive(100px, 20px, 2rem, 20px);
+}

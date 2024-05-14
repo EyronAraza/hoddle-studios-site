@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | HODDLE Studios</title>
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" href="img/hoddle-tab-icon.png">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/qna-main.css">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- Link to JavaScript -->
+    <script defer src="js/render.js"></script>
+</head>
+<!-- 
+    REFERENCES PURPOSES
+    Comment over code: ctrl + / OR shift + alt + A
+    Tag over text: ctrl + shift + P then 'Emment'
+    Create tags efficiently: 'tagname.className' or 'tagname#idName'
+    Move code line: 'alt + up' or 'alt + down'
+    If want to position absolute of child inside parent container, parent's position should be 'relative'
+-->
+
+<body>
+    <!-- APPLY NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- FEEDBACK FORM -->
+        <section id="section-a">
+            <!-- Message box -->
+            <div id="msg-box">
+                <img src="img/catto.gif" id="gif-cat">
+                <h1>Give us your feedback!</h1>
+                <p>Thanks for sending us your ideas, issues, or appreciations. We can’t respond individually, but we’ll
+                    pass it on to the
+                    teams who are working to help make experiences better for everyone.
+                    <br><br>
+                    If you do have a specific question, or need help resolving a problem, you can message our Email or
+                    contact us to connect
+                    with our support team.
+                    <br><br>
+                    <b><i class="fa-solid fa-envelope"></i> hoddlestudios@gmail.com</b>
+                    <br>
+                    <b><i class="fa-solid fa-phone"></i> +971 00 000 0000</b>
+                </p>
+                <!-- <img src="img/curve-arrow.png" id="img-arrow"> -->
+            </div>
+
+            <!-- Form box -->
+            <div id="form-box">
+                <h1>Feedback Form</h1>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms built-in contact form -->
+                    <input type="hidden" name="access_key" value="564e724a-1f6b-4f65-a8d5-0dd28e49d581">
+
+                    <!-- NAME LABEL -->
+                    <label for="name-box">Name:</label>
+                    <input type="text" id="name-box" name="name" placeholder="Enter your name" required>
+
+                    <!-- EMAIL LABEL -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <!-- TEXT AREA LABEL  -->
+                    <label for="message">What's your concern?</label>
+                    <textarea id="subject" name="message" placeholder="Enter your message" style="height:200px"
+                        required></textarea>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div style="display: flex; justify-content: center;">
+                        <button id="btn-submit" type="submit">submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- APPLY FOOTER -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

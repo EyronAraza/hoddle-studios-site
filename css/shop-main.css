@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Niramit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #8bc245 black; }
+
+body {
+  background-color: #262626; }
+
+/* For Tablet screens (over 480px and under 800px) */
+/* For Phone screens (under 480px) */
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+/* MAIN CONTENT */
+#main-content {
+  position: relative;
+  top: 90px;
+  width: 100%;
+  height: auto; }
+  #main-content #section-a {
+    position: relative;
+    top: 10px;
+    padding: 30px 0;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    color: #fff; }
+    #main-content #section-a h1 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      font-family: "Krona One", sans-serif;
+      text-align: center; }
+    #main-content #section-a #shop-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap; }
+      #main-content #section-a #shop-container .shop-item {
+        position: relative;
+        width: 225px;
+        height: auto;
+        background-color: #404040;
+        border-radius: 10px;
+        padding: 15px; }
+        #main-content #section-a #shop-container .shop-item .shop-item-img-container {
+          width: 100%;
+          height: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 25px; }
+        #main-content #section-a #shop-container .shop-item .shop-item-img {
+          width: 80%;
+          height: auto;
+          margin-top: auto;
+          margin-bottom: auto; }
+        #main-content #section-a #shop-container .shop-item .item-name {
+          font-weight: bold;
+          line-height: 16px;
+          font-size: 1rem; }
+        #main-content #section-a #shop-container .shop-item .item-price {
+          margin-top: 1px;
+          margin-bottom: 5px;
+          color: #fc8d24;
+          font-size: 1rem; }
+        #main-content #section-a #shop-container .shop-item .btn-cart {
+          width: 100%;
+          height: auto;
+          background-color: #8bc245;
+          color: white;
+          font-weight: bold;
+          font-size: 1rem;
+          border: 0;
+          border-radius: 5px;
+          cursor: pointer; }
+          #main-content #section-a #shop-container .shop-item .btn-cart:hover {
+            background-color: #70a034; }
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  /* MAIN CONTENT */
+  #main-content #section-a #shop-container .shop-item {
+    width: 200px; } }
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* MAIN CONTENT */
+  #main-content {
+    top: 70px; }
+    #main-content #section-a #shop-container .shop-item {
+      width: 150px; } }
+
+/*# sourceMappingURL=shop-main.css.map */

@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Niramit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #8bc245 black; }
+
+body {
+  background-color: #262626; }
+
+/* For Tablet screens (over 480px and under 800px) */
+/* For Phone screens (under 480px) */
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+/* MAIN CONTENT */
+#main-content {
+  position: relative;
+  top: 90px;
+  width: 100%;
+  height: auto;
+  /* SECTION HEADER */
+  /* SECTION B: Team Members */
+  /* SECTION C: ABOUT US */ }
+  #main-content #section-a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 95vh;
+    /* VIDEO BACKGROUND CONTAINER */ }
+    #main-content #section-a #vid-bg-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #main-content #section-a #vid-bg-container #bg-dim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2; }
+      #main-content #section-a #vid-bg-container #vid-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1; }
+    #main-content #section-a #h1-slogan {
+      color: #fff;
+      font-family: "Krona One", sans-serif;
+      font-size: 4rem;
+      text-align: center;
+      margin-top: 12vh;
+      width: 80%;
+      height: auto;
+      text-shadow: 0 2px 4px black; }
+    #main-content #section-a p {
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 0 2px 4px black; }
+    #main-content #section-a #btn-projects {
+      margin-top: 60px;
+      background-color: #8bc245;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      font-family: "Krona One", sans-serif;
+      padding: 20px;
+      width: 35%;
+      border: 0px;
+      border-radius: 40px;
+      box-shadow: 0px 2px 4px 0px black;
+      cursor: pointer;
+      transition: 0.2s; }
+      #main-content #section-a #btn-projects:hover {
+        background-color: #70a034; }
+    #main-content #section-a #btn-dev-nest {
+      margin-top: 50px;
+      background-color: #8bc245;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-family: "Krona One", sans-serif;
+      padding: 10px;
+      margin-bottom: 19vh;
+      width: 30%;
+      border: 0px;
+      border-radius: 40px;
+      box-shadow: 0px 2px 4px 0px black;
+      cursor: pointer;
+      transition: 0.2s; }
+      #main-content #section-a #btn-dev-nest:hover {
+        background-color: #70a034; }
+  #main-content .header {
+    margin: 50px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #main-content .header hr {
+      background-color: white;
+      color: white;
+      height: 2px;
+      width: 95%; }
+    #main-content .header h1 {
+      color: #fff;
+      font-family: "Krona One", sans-serif;
+      padding: 10px;
+      font-size: 3rem; }
+  #main-content #section-b {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; }
+    #main-content #section-b .profile-card {
+      position: relative;
+      background-color: #404040;
+      border: 5px white solid;
+      border-radius: 15px;
+      width: 225px;
+      height: auto;
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transform: scale(1);
+      transition: 0.25s; }
+      #main-content #section-b .profile-card .h1-letter {
+        font-size: 5rem;
+        color: #fff;
+        font-family: "Krona One", sans-serif;
+        transition: 0.25s; }
+      #main-content #section-b .profile-card .img-profile {
+        width: 70%;
+        height: auto;
+        margin-bottom: 10px; }
+      #main-content #section-b .profile-card .profile-name {
+        font-size: 1.8rem;
+        color: #fc8d24;
+        font-family: "Krona One", sans-serif; }
+      #main-content #section-b .profile-card ul {
+        font-size: 1.1rem;
+        color: #fff;
+        list-style-type: none;
+        font-family: "Krona One", sans-serif;
+        text-align: center; }
+      #main-content #section-b .profile-card:hover {
+        border: 5px #8bc245 solid;
+        box-shadow: 0px 0px 10px 2px #8bc245;
+        transform: scale(1.02); }
+        #main-content #section-b .profile-card:hover .h1-letter {
+          color: #8bc245; }
+  #main-content #section-c {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    height: auto;
+    width: 100%; }
+    #main-content #section-c #gif-gaming {
+      width: 40vw;
+      height: auto;
+      flex-shrink: 0; }
+    #main-content #section-c #text-container-aboutus {
+      width: 40%; }
+      #main-content #section-c #text-container-aboutus #txt-aboutus {
+        color: #fff;
+        font-size: 1.4rem; }
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  /* SECTION A: Landing content */
+  #main-content #section-a #h1-slogan {
+    font-size: 2.5rem;
+    width: 95%; }
+  #main-content #section-a p {
+    font-size: 1.3rem; }
+  #main-content #section-a #btn-projects {
+    width: 65%;
+    border-radius: 50px; }
+  #main-content #section-a #btn-dev-nest {
+    width: 40%; } }
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  #main-content {
+    top: 70px;
+    /* SECTION A: Landing content */
+    /* SECTION HEADER */
+    /* SECTION B: TEAM */
+    /* SECTION C: ABOUT US */ }
+    #main-content #section-a #h1-slogan {
+      font-size: 1.8rem; }
+    #main-content #section-a p {
+      font-size: 1.3rem; }
+    #main-content #section-a #btn-projects {
+      width: 75%;
+      border-radius: 50px;
+      font-size: 1.3rem; }
+    #main-content #section-a #btn-dev-nest {
+      width: 65%; }
+    #main-content .header h1 {
+      font-size: 2rem; }
+    #main-content #section-b .profile-card {
+      width: 40vw; }
+    #main-content #section-c {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #main-content #section-c #gif-gaming {
+        width: 50vw; }
+      #main-content #section-c #text-container-aboutus {
+        width: 85%; } }
+
+/*# sourceMappingURL=home-main.css.map */

@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Niramit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #8bc245 black; }
+
+body {
+  background-color: #262626; }
+
+/* For Tablet screens (over 480px and under 800px) */
+/* For Phone screens (under 480px) */
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+/* MAIN CONTENT */
+#main-content {
+  position: relative;
+  top: 90px;
+  width: 100%;
+  height: auto; }
+  #main-content #section-a {
+    position: relative;
+    top: 10px;
+    padding: 90px 0;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    color: #fff; }
+    #main-content #section-a h1 {
+      font-family: "Krona One", sans-serif;
+      text-align: center;
+      font-size: 2rem; }
+    #main-content #section-a p {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 23px;
+      margin-top: 20px; }
+    #main-content #section-a #msg-box {
+      position: relative;
+      background-color: #8bc245;
+      width: 25vw;
+      height: auto;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      margin-top: auto;
+      margin-bottom: auto; }
+      #main-content #section-a #msg-box #gif-cat {
+        position: absolute;
+        left: 50%;
+        top: -84px;
+        transform: translateX(-50%);
+        width: 100px;
+        height: auto; }
+      #main-content #section-a #msg-box #img-arrow {
+        width: 12vw;
+        height: 120px;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: 20px; }
+    #main-content #section-a #form-box {
+      background-color: #404040;
+      width: 30vw;
+      height: auto;
+      border-radius: 30px;
+      padding: 30px;
+      margin-top: auto;
+      margin-bottom: auto; }
+      #main-content #section-a #form-box form {
+        font-size: 1.2rem; }
+      #main-content #section-a #form-box input,
+      #main-content #section-a #form-box textarea {
+        width: 100%;
+        padding: 5px;
+        border: 4px solid #8bc245;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        resize: vertical;
+        font-size: 1rem;
+        background-color: white; }
+        #main-content #section-a #form-box input:focus,
+        #main-content #section-a #form-box textarea:focus {
+          outline: 2px solid white;
+          outline-offset: 1px; }
+      #main-content #section-a #form-box button {
+        margin-top: 10px;
+        position: relative;
+        background-color: #8bc245;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1vw;
+        font-family: "Krona One", sans-serif;
+        padding: 7px;
+        width: 23%;
+        border: 0px;
+        border-radius: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s; }
+        #main-content #section-a #form-box button:hover {
+          background-color: #70a034; }
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  #main-content #section-a {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 150px 0;
+    gap: 2rem; }
+    #main-content #section-a p {
+      font-size: 1.4rem; }
+    #main-content #section-a #msg-box {
+      width: 70vw; }
+    #main-content #section-a #form-box {
+      width: 85vw; }
+      #main-content #section-a #form-box form {
+        font-size: 1.4rem; }
+      #main-content #section-a #form-box input,
+      #main-content #section-a #form-box textarea {
+        font-size: 1.4rem; }
+      #main-content #section-a #form-box button {
+        font-size: 3vw;
+        width: 45%; } }
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  #main-content #section-a {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px 0;
+    gap: 2rem; }
+    #main-content #section-a p {
+      font-size: 1.2rem; }
+    #main-content #section-a #msg-box {
+      width: 70vw; }
+    #main-content #section-a #form-box {
+      width: 83vw; }
+      #main-content #section-a #form-box form {
+        font-size: 1.2rem; }
+      #main-content #section-a #form-box input,
+      #main-content #section-a #form-box textarea {
+        font-size: 1.2rem; }
+      #main-content #section-a #form-box button {
+        font-size: 5vw;
+        width: 50%; } }
+
+/*# sourceMappingURL=qna-main.css.map */

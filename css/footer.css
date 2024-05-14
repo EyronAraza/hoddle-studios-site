@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Niramit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #8bc245 black; }
+
+body {
+  background-color: #262626; }
+
+/* For Tablet screens (over 480px and under 800px) */
+/* For Phone screens (under 480px) */
+.header {
+  margin: 50px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header hr {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 95%; }
+  .header h1 {
+    color: #fff;
+    font-family: "Krona One", sans-serif;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center; }
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* SECTION HEADER */
+  .header h1 {
+    font-size: 2rem; } }
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #404040;
+  height: 290px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer #top-line {
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 99.9%; }
+  footer #footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer #footer-logo #logo-img {
+      width: 170px;
+      height: auto;
+      transition: 0.5s;
+      cursor: pointer; }
+      footer #footer-logo #logo-img:hover {
+        filter: drop-shadow(0px 0px 4px #8bc245); }
+    footer #footer-logo #logo-text {
+      position: relative;
+      text-align: center;
+      bottom: 9px;
+      font-size: 1.1rem;
+      color: #fff;
+      white-space: nowrap; }
+  footer #social-media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 6vh;
+    margin-top: 20px;
+    gap: 40px; }
+    footer #social-media-container .social-icon {
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer; }
+      footer #social-media-container .social-icon:hover {
+        color: #e6e6e6; }
+  footer #copyright-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer #copyright-container #copyright-line {
+      width: 95%;
+      border: 1px white solid;
+      margin-bottom: 10px; }
+    footer #copyright-container #copyright-text {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      white-space: nowrap; }
+
+/*# sourceMappingURL=footer.css.map */

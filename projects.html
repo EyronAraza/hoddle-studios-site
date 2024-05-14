@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | HODDLE Studios</title>
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" href="img/hoddle-tab-icon.png">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/projects-main.css">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+
+    <!-- Link to JavaScript -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/render.js"></script>
+    <script defer src="js/flickity.pkgd.min.js"></script>
+</head>
+<!-- 
+    REFERENCES PURPOSES
+    Comment over code: ctrl + / OR shift + alt + A
+    Tag over text: ctrl + shift + P then 'Emment'
+    Create tags efficiently: 'tagname.className' or 'tagname#idName'
+    Move code line: 'alt + up' or 'alt + down'
+    If want to position absolute of child inside parent container, parent's position should be 'relative'
+-->
+
+<body>
+    <!-- APPLY NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- SECTION A: COMMUHELP GAME -->
+        <section id="section-a">
+            <!-- VIDEO BACKGROUND -->
+            <div id="vid-bg-container">
+                <!-- Background color -->
+                <div id="bg-dim"></div>
+                <!-- Video -->
+                <video id="vid-bg" autoplay loop muted plays-inline>
+                    <source src="vid/commuhelp-bg-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Commuhelp game logo -->
+            <img src="img/game-logo-test.png" id="commuhelp-logo">
+            <h1>A coop game about saving the environment.</h1>
+            <p>Demo is out now!</p>
+
+            <!-- Download button -->
+            <button id="btn-download" type="button">Download on Itch.io</button>
+
+            <!-- More button -->
+            <button id="btn-more" type="button" onclick="scrolltToElement('section-b', 250)">Check video trailer &
+                showcase <i class="fa-solid fa-angles-down"></i></button>
+        </section>
+
+        <!-- HEADER: Video Trailer -->
+        <div class="header">
+            <hr>
+            <h1>Video Trailer</h1>
+            <hr>
+        </div>
+
+        <!-- SECTION B: VIDEO TRAILER -->
+        <section id="section-b">
+            <div id="vid-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k8t1Wg7Bfac?si=tHe0kR6P58IDNcjK"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- HEADER: SHOWCASE GALLERY -->
+        <div class="header">
+            <hr>
+            <h1>Showcase Gallery</h1>
+            <hr>
+        </div>
+
+        <!-- SECTION C: SHOWCASE GALLERY -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell">
+                <!-- IMAGE SCREENSHOT -->
+                <img src="img/showcase/unity.jpeg" class="gallery-img">
+
+                <!-- TEXT DESCRIPTION -->
+                <div class="gallery-desc">
+                    <h1 class="gallery-desc-header">Developing the game</h1>
+                    <p class="gallery-desc-text">The game engine used to develop the game is
+                        <b>"Unity"</b>. Done
+                        by Dylan Duario.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <!-- IMAGE SCREENSHOT -->
+                <img src="img/showcase/magicavoxel.png" class="gallery-img">
+
+                <!-- TEXT DESCRIPTION -->
+                <div class="gallery-desc">
+                    <h1 class="gallery-desc-header">3D Models Creation</h1>
+                    <p class="gallery-desc-text">The 3D game assets is made with the software
+                        <b>"MagicaVoxel"</b>. Done
+                        by Eyron Araza.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <!-- IMAGE SCREENSHOT -->
+                <img src="img/showcase/pixelorama.png" class="gallery-img">
+
+                <!-- TEXT DESCRIPTION -->
+                <div class="gallery-desc">
+                    <h1 class="gallery-desc-header">Character Sprites Creation</h1>
+                    <p class="gallery-desc-text">The 2D character sprites including animations is made with the software
+                        <b>"Pixelorama"</b>. Done
+                        by Eyron Araza.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <!-- IMAGE SCREENSHOT -->
+                <img src="img/showcase/game-ui.png" class="gallery-img">
+
+                <!-- TEXT DESCRIPTION -->
+                <div class="gallery-desc">
+                    <h1 class="gallery-desc-header">Designing the Game UI</h1>
+                    <p class="gallery-desc-text">The game UI prototype is designed with the software
+                        <b>"Figma"</b>. Done
+                        by Luke Domingo and Omar El Sedek.
+                    </p>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <!-- IMAGE SCREENSHOT -->
+                <img src="img/showcase/level-design.png" class="gallery-img">
+
+                <!-- TEXT DESCRIPTION -->
+                <div class="gallery-desc">
+                    <h1 class="gallery-desc-header">Designing Game Levels and Mechanics</h1>
+                    <p class="gallery-desc-text">The design of game levels including game mechanics is made with
+                        the software
+                        <b>"Figma"</b>. Done
+                        by Eyron Araza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- APPLY FOOTER -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

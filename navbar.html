@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar (Dev Page) | HODDLE Studios</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- Link to JavaScript -->
+    <script defer src="js/navbar.js"></script>
+</head>
+<!-- 
+    REFERENCES PURPOSES
+    Comment over code: ctrl + / OR shift + alt + A
+    Tag over text: ctrl + shift + P then 'Emment'
+    Create tags efficiently: 'tagname.className' or 'tagname#idName'
+    Move code line: 'alt + up' or 'alt + down'
+    If want to position absolute of child inside parent container, parent's position should be 'relative'
+-->
+
+<body>
+    <!-- TOP NAVIGATION BAR -->
+    <nav id="main-nav">
+        <!-- Logo -->
+        <a href="index.html"><img src="img/hoddle-logo.png" id="logo" alt="Logo"></a>
+
+        <!-- Exit button (for mobile) -->
+        <label for="checkbox-menubar" id="exit-btn"><i class="fa-solid fa-xmark"></i></label>
+
+        <!-- Navigation Links -->
+        <ul>
+            <!-- Home -->
+            <li class="list-link list-link-1">
+                <i class="link-icon fa-solid fa-house"></i><a href="index.html" class="nav-link">Home</a>
+                <hr class="link-underline link-underline-1">
+            </li>
+
+            <!-- Projects -->
+            <li class="list-link list-link-2">
+                <i class="link-icon fa-solid fa-gamepad"></i><a href="projects.html" class="nav-link">Projects</a>
+                <hr class="link-underline link-underline-2">
+            </li>
+
+            <!-- Q&A -->
+            <li class="list-link list-link-3">
+                <i class="link-icon fa-solid fa-comments"></i></i><a href="feedback.html" class="nav-link">Feedback</a>
+                <hr class="link-underline link-underline-3">
+            </li>
+
+            <!-- Shop -->
+            <li class="list-link list-link-4">
+                <i class="link-icon fa-solid fa-store"></i><a href="shop.html" class="nav-link">Shop</a>
+                <hr class="link-underline link-underline-4">
+            </li>
+        </ul>
+
+        <!-- Download Button -->
+        <a id="download-anchor" href="https://www.instagram.com/hoddlestudios_/" target="_blank">
+            <div id="download-btn">
+                <img id="download-img" src="img/game-logo-test.png">
+                <p id="download-text">Download our game!</p>
+            </div>
+        </a>
+
+        <!-- Social Media Container -->
+        <div id="social-media-container">
+            <a href="https://www.facebook.com/profile.php?id=61559474380163" target="_blank"><i
+                    class="social-icon fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/hoddlestudios_/" target="_blank"><i
+                    class="social-icon fa-brands fa-instagram"></i></a>
+            <!-- <a href="https://www.instagram.com/hoddlestudios_/" target="_blank"><i
+                    class="social-icon fa-brands fa-twitter"></i></a> -->
+            <a href="https://www.youtube.com/@HODDLESTUDIOS-fn5vv" target="_blank"><i
+                    class="social-icon fa-brands fa-youtube"></i></a>
+            <!-- <a href="https://www.instagram.com/hoddlestudios_/" target="_blank"><i
+                    class="social-icon fa-brands fa-linkedin"></i></a> -->
+        </div>
+
+        <!-- Navbar underline -->
+        <hr id="navbar-underline">
+    </nav>
+
+    <!-- TOP NAVIGATION BAR FOR MOBILE -->
+    <div id="nav-mobile">
+        <!-- Logo for mobile -->
+        <a href="index.html"><img src="img/hoddle-logo.png" id="logo-mob" alt="Logo"></a>
+
+        <!-- Navbar underline -->
+        <hr id="navbar-underline">
+
+        <!-- Menu Bar -->
+        <input type="checkbox" id="checkbox-menubar">
+        <label for="checkbox-menubar" id="menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+</body>
+
+</html>

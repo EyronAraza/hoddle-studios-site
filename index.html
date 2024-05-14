@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | HODDLE Studios</title>
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" href="img/hoddle-tab-icon.png">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/home-main.css">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- Link to JavaScript -->
+    <script defer src="js/render.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<!-- 
+    REFERENCES PURPOSES
+    Comment over code: ctrl + / OR shift + alt + A
+    Tag over text: ctrl + shift + P then 'Emment'
+    Create tags efficiently: 'tagname.className' or 'tagname#idName'
+    Move code line: 'alt + up' or 'alt + down'
+    If want to position absolute of child inside parent container, parent's position should be 'relative'
+-->
+
+<body>
+    <!-- APPLY NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- SECION A: Landing content -->
+        <section id="section-a">
+            <!-- VIDEO BACKGROUND -->
+            <div id="vid-bg-container">
+                <!-- Background color -->
+                <div id="bg-dim"></div>
+                <!-- Video -->
+                <video id="vid-bg" autoplay loop muted plays-inline>
+                    <source src="vid/nature-3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Header and text -->
+            <h1 id="h1-slogan">Where pixels meet passion, stories are born!</h1>
+            <p>"From pixels to dreams, we create worlds where imagination knows no bounds."</p>
+
+            <!-- Buttons -->
+            <button id="btn-projects" type="button" onclick="clickToLink('projects.html')">Explore our latest project <i
+                    class="fa-solid fa-angle-right"></i></button>
+            <button id="btn-dev-nest" type="button" onclick="scrolltToElement('section-b', 250)">Developer Nest <i
+                    class="fa-solid fa-angles-down"></i></button>
+        </section>
+
+        <!-- HEADER: The Nest -->
+        <div class="header">
+            <hr>
+            <h1>The Nest</h1>
+            <hr>
+        </div>
+
+        <!-- SECTION B: TEAM MEMBERS -->
+        <section id="section-b">
+            <!-- MEMBER 1 HUDA -->
+            <div class="profile-card profile-card-1">
+                <h1 class="h1-letter">H</h1>
+                <img src="img/members/huda-pic.png" class="img-profile">
+                <p class="profile-name">Huda</p>
+                <ul>
+                    <li>Project Leader</li>
+                    <li>Product Designer</li>
+                    <li>Logo Designer</li>
+                </ul>
+            </div>
+
+            <!-- MEMBER 2 OMAR -->
+            <div class="profile-card profile-card-2">
+                <h1 class="h1-letter">O</h1>
+                <img src="img/members/omar-pic.png" class="img-profile">
+                <p class="profile-name">Omar</p>
+                <ul>
+                    <li>UI Designer</li>
+                    <li>UX Designer</li>
+                    <li>-</li>
+                </ul>
+            </div>
+
+            <!-- MEMBER 3 DAVID -->
+            <div class="profile-card profile-card-3">
+                <h1 class="h1-letter">D</h1>
+                <img src="img/members/david-pic.png" class="img-profile">
+                <p class="profile-name">David</p>
+                <ul>
+                    <li>Game Tester</li>
+                    <li>Marketing</li>
+                    <li>-</li>
+                </ul>
+            </div>
+
+            <!-- MEMBER 4 DYLAN -->
+            <div class="profile-card profile-card-4">
+                <h1 class="h1-letter">D</h1>
+                <img src="img/members/dylan-pic.png" class="img-profile">
+                <p class="profile-name">Dylan</p>
+                <ul>
+                    <li>Game Developer</li>
+                    <li>Game Manager</li>
+                    <li>Video Editor</li>
+                </ul>
+            </div>
+
+            <!-- MEMBER 5 LUKE -->
+            <div class="profile-card profile-card-5">
+                <h1 class="h1-letter">L</h1>
+                <img src="img/members/luke-pic.png" class="img-profile">
+                <p class="profile-name">Luke</p>
+                <ul>
+                    <li>UI Designer</li>
+                    <li>UX Designer</li>
+                    <li>Marketing</li>
+                </ul>
+            </div>
+
+            <!-- MEMBER 6 EYRON -->
+            <div class="profile-card profile-card-6">
+                <h1 class="h1-letter">E</h1>
+                <img src="img/members/eyron-pic.png" class="img-profile">
+                <p class="profile-name">Eyron</p>
+                <ul>
+                    <li>Web Developer</li>
+                    <li>Game Artist</li>
+                    <li>Level Designer</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HEADER: About Us -->
+        <div class="header">
+            <hr>
+            <h1>About Us</h1>
+            <hr>
+        </div>
+
+        <!-- SECTION C: ABOUT US -->
+        <section id="section-c">
+            <img src="img/gif-gaming.gif" id="gif-gaming">
+            <div id="text-container-aboutus">
+                <p id="txt-aboutus"> <b>Welcome to HODDLE Studios!</b>
+                    <br>
+                    We are an indie game company based on UAE, consisting of six like-minded members to bring a
+                    meaningful impact to the world through our games. We create
+                    games that entertain and educate players like you on real-world environmental and sustainability
+                    issues.
+                    <br> <br>
+                    We are more than just a Gaming Studio. We want you to hoddle on with us on this journey to transform
+                    gaming into a tool
+                    for education and positive change.
+
+                </p>
+            </div>
+        </section>
+
+        <!-- APPLY FOOTER -->
+        <div id="footer-container"></div>
+    </main>
+</body>
+
+</html>

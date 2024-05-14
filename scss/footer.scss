@@ -1,0 +1,99 @@
+@import 'main';
+@import 'variables';
+
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: lighten($main-bg-color, 10%);
+    height: 290px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Top line
+    #top-line {
+        $hr-color: white;
+        background-color: $hr-color;
+        color: $hr-color;
+        height: 2px;
+        width: 99.9%;
+    }
+
+    // Footer logo
+    #footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // cursor: pointer;
+
+        #logo-img {
+            width: 170px;
+            height: auto;
+            transition: 0.5s;
+            cursor: pointer;
+
+            // Hover over logo
+            &:hover {
+                filter: drop-shadow(0px 0px 4px $hoddle-green)
+            }
+        }
+
+        #logo-text {
+            position: relative;
+            text-align: center;
+            bottom: 9px;
+            font-size: 1.1rem;
+            color: $main-txt-color;
+            white-space: nowrap;
+        }
+    }
+
+    // Social Media container
+    #social-media-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 6vh;
+        margin-top: 20px;
+        gap: 40px;
+
+        // social media icons
+        .social-icon {
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+
+            &:hover {
+                // text-shadow: 0 0 $text-shadow-spread rgba(255, 255, 255, $text-shadow-alpha);
+                color: darken($main-txt-color, 10%);
+            }
+        }
+    }
+
+    // Copyright container
+    #copyright-container {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #copyright-line {
+            // $hr-color: white;
+            // background-color: $hr-color;
+            // color: $hr-color;
+            width: 95%;
+            border: 1px white solid;
+            margin-bottom: 10px;
+        }
+
+        #copyright-text {
+            color: $main-txt-color;
+            font-size: 1.1rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+    }
+}

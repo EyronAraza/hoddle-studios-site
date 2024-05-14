@@ -1,0 +1,344 @@
+@import 'main';
+@import 'variables';
+
+$txt-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+
+/* MAIN CONTENT */
+#main-content {
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: auto;
+    // border: 2px red solid;
+
+    // SECTION A: Landing content
+    #section-a {
+        position: relative;
+        // top: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // border: 2px red solid;
+        height: 95vh;
+
+        /* VIDEO BACKGROUND CONTAINER */
+        #vid-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // Background dim
+            #bg-dim {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: 2;
+            }
+
+            // Video background
+            #vid-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+
+        // Slogan header
+        #h1-slogan {
+            color: $main-txt-color;
+            font-family: $font-krona;
+            font-size: 4rem;
+            text-align: center;
+            margin-top: 12vh;
+            // border: 2px blue solid;
+            width: 80%;
+            height: auto;
+            text-shadow: $txt-shadow;
+        }
+
+        // Text under slogan header
+        p {
+            color: $main-txt-color;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: $txt-shadow;
+        }
+
+        // Button: Projects
+        #btn-projects {
+            margin-top: 60px;
+            background-color: $hoddle-green;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: $font-krona;
+            padding: 20px;
+            width: 35%;
+            border: 0px;
+            border-radius: 40px;
+            box-shadow: $btn-shadow;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: darken($hoddle-green, 10%);
+            }
+        }
+
+        // Button: Developer's Nest
+        #btn-dev-nest {
+            margin-top: 50px;
+            background-color: $hoddle-green;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: $font-krona;
+            padding: 10px;
+            margin-bottom: 19vh;
+            width: 30%;
+            border: 0px;
+            border-radius: 40px;
+            box-shadow: $btn-shadow;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: darken($hoddle-green, 10%);
+            }
+        }
+    }
+
+    /* SECTION HEADER */
+    .header {
+        margin: 50px 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // HR lines
+        hr {
+            $hr-color: white;
+            background-color: $hr-color;
+            color: $hr-color;
+            height: 2px;
+            width: 95%;
+        }
+
+        // Header text
+        h1 {
+            color: $main-txt-color;
+            font-family: $font-krona;
+            padding: 10px;
+            font-size: 3rem;
+        }
+    }
+
+    /* SECTION B: Team Members */
+    #section-b {
+        position: relative;
+        // padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        // Styling all profile cards
+        $profile-hover-transition: 0.25s;
+
+        .profile-card {
+            position: relative;
+            // background-color: #52564b;
+            background-color: lighten($main-bg-color, 10%);
+            border: 5px white solid;
+            border-radius: 15px;
+            width: 225px;
+            height: auto;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transform: scale(1);
+            transition: $profile-hover-transition;
+
+            // Letter color
+            .h1-letter {
+                font-size: 5rem;
+                color: $main-txt-color;
+                font-family: $font-krona;
+                transition: $profile-hover-transition;
+            }
+
+            // Profile pic
+            .img-profile {
+                width: 70%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            // Profile name
+            .profile-name {
+                font-size: 1.8rem;
+                color: $hoddle-orange;
+                font-family: $font-krona;
+            }
+
+            // List of roles
+            ul {
+                font-size: 1.1rem;
+                color: $main-txt-color;
+                list-style-type: none;
+                font-family: $font-krona;
+                text-align: center;
+            }
+
+            // Hover over profile cards
+            &:hover {
+                border: 5px $hoddle-green solid;
+                box-shadow: 0px 0px 10px 2px $hoddle-green;
+                transform: scale(1.02);
+
+                .h1-letter {
+                    color: $hoddle-green;
+                }
+            }
+        }
+    }
+
+    /* SECTION C: ABOUT US */
+    #section-c {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        gap: 40px;
+        margin-bottom: 40px;
+        height: auto;
+        width: 100%;
+
+        // Gif image
+        #gif-gaming {
+            width: 40vw;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        // Text of about us
+        #text-container-aboutus {
+            // border: 2px red solid;
+            width: 40%;
+
+            #txt-aboutus {
+                color: $main-txt-color;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+/* For Tablet screens (over 480px and under 800px) */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+
+    /* SECTION A: Landing content */
+    #main-content {
+        #section-a {
+            #h1-slogan {
+                font-size: 2.5rem;
+                width: 95%;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+
+            #btn-projects {
+                width: 65%;
+                border-radius: 50px;
+            }
+
+            #btn-dev-nest {
+                width: 40%;
+            }
+        }
+    }
+}
+
+/* For Phone screens (under 480px) */
+@media only screen and (max-width: 480px) {
+    #main-content {
+        top: 70px;
+
+        /* SECTION A: Landing content */
+        #section-a {
+            #h1-slogan {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+
+            #btn-projects {
+                width: 75%;
+                border-radius: 50px;
+                font-size: 1.3rem;
+            }
+
+            #btn-dev-nest {
+                width: 65%;
+            }
+        }
+
+        /* SECTION HEADER */
+        .header {
+
+            // Header text
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* SECTION B: TEAM */
+        #section-b {
+            .profile-card {
+                width: 40vw;
+            }
+        }
+
+        /* SECTION C: ABOUT US */
+        #section-c {
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+
+            #gif-gaming {
+                width: 50vw;
+            }
+
+            // Text of about us
+            #text-container-aboutus {
+                // border: 2px red solid;
+                width: 85%;
+            }
+        }
+    }
+
+}
