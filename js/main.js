@@ -10,6 +10,10 @@ function scrolltToElement(idElement, additionalPixels = 0) {
 }
 
 // For redirecting to a link after clicking an item
-function clickToLink(link) {
-    window.location.href = link;
+function clickToLink(link, openNewTab) {
+    if (openNewTab) {
+        window.open(link, '_blank');
+    } else {
+        window.location.href = link;
+    }
 }
